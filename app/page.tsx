@@ -133,7 +133,14 @@ export default function Home() {
               </div>
               {project.image ? (
                 <a className="project-visual" href={project.href} target="_blank" rel="noreferrer" aria-label={`Open ${project.title}`}>
-                  <img src={project.image} alt={`${project.title} interface preview`} />
+                  <span className="preview-header">
+                    <span className="preview-dots" aria-hidden="true"><i /><i /><i /></span>
+                    <b>{project.category}</b>
+                    <ArrowUpRight aria-hidden="true" />
+                  </span>
+                  <span className="preview-canvas">
+                    <img src={project.image} alt={`${project.title} interface preview`} />
+                  </span>
                 </a>
               ) : (
                 <div className="project-visual evidence-visual" aria-hidden="true">

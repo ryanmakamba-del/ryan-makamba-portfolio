@@ -211,34 +211,27 @@ export default function Home() {
         <div className="credentials">
           <div className="credential"><GraduationCap /><span><b>MS Applied AI &amp; Business Analytics</b><small>Quinnipiac University · Expected Dec 2026</small></span></div>
           <div className="credential"><BriefcaseBusiness /><span><b>BSc Risk Management &amp; Insurance</b><small>National University of Science and Technology · 2022</small></span></div>
-        </div>
-      </section>
-
-      <section className="skills-section section" aria-labelledby="skills-heading">
-        <div className="skills-heading">
-          <p className="eyebrow">Capabilities</p>
-          <h2 id="skills-heading">Skills &amp; Tools</h2>
-        </div>
-        <div className="skills-grid">
-          <article className="skills-card">
-            <h3><Code2 /> Technical Skills</h3>
-            <ul>
-              {technicalSkills.map(({ label, icon: Icon }) => (
-                <li key={label}><Icon /><span>{label}</span></li>
-              ))}
-            </ul>
-          </article>
-          <article className="skills-card">
-            <h3><Wrench /> Tools</h3>
-            <ul>
-              {tools.map(({ label, value, icon: Icon }) => (
-                <li key={label}>
-                  <Icon />
-                  <span>{value ? <><b>{label}:</b> {value}</> : label}</span>
-                </li>
-              ))}
-            </ul>
-          </article>
+          <div className="skills-grid" aria-label="Skills and tools">
+            <article className="skills-card technical-card">
+              <h3><Code2 /> Technical Skills</h3>
+              <ul>
+                {technicalSkills.map(({ label, icon: Icon }) => (
+                  <li key={label}><Icon /><span>{label}</span></li>
+                ))}
+              </ul>
+            </article>
+            <article className="skills-card tools-card">
+              <h3><Wrench /> Tools</h3>
+              <ul>
+                {tools.map(({ label, value, icon: Icon }) => (
+                  <li key={label}>
+                    <Icon />
+                    <span>{value ? <><b>{label}:</b> {value}</> : label}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
 

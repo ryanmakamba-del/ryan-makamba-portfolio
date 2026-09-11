@@ -45,30 +45,38 @@ const experience = [
   {
     dates: "Jun 2026 — Aug 2026",
     role: "Annual Fund & Database Specialist Intern",
-    organization: "The Salvation Army — Southern New England Division",
-    detail:
-      "Managed and reconciled donor data across Salesforce and Raiser’s Edge, built reporting workflows in Power BI and Excel, and strengthened data quality across fundraising channels.",
+    organization: "The Salvation Army – Southern New England Division | Hartford, CT",
+    details: [
+      "Managed divisional donor data integrity across Salesforce and Raiser's Edge gift entry, reconciliation, reporting, and maintaining audit-ready records for the Advancement team.",
+      "Partnered with IT to connect Salesforce and Raiser's Edge data into Power BI and Excel reporting workflows, giving leadership up-to-date visibility into donor giving and improving reconciliation efficiency.",
+    ],
   },
   {
     dates: "Apr 2025 — May 2026",
-    role: "Research Assistant — Institutional Research & Strategy",
-    organization: "Quinnipiac University",
-    detail:
-      "Integrated enrollment, student-record and financial-aid data for 9,200+ students while supporting IPEDS, NSLDS and FVT/GE reporting with governed, audit-ready datasets.",
+    role: "Research Assistant – Office of Institutional Research & Strategy",
+    organization: "Quinnipiac University | Hamden, CT",
+    details: [
+      "Standardized compliance documentation and supported federal regulatory submissions (Integrated Postsecondary Education Data System (IPEDS), National Student Loan Data System (NSLDS), and Financial Value Transparency Reporting) by generating and auditing reporting extracts via Informer.",
+      "Consolidated enrollment, academic records, and financial aid data across Ellucian Colleague for 9,200+ students, structuring validated datasets to power institutional dashboards and official reporting.",
+    ],
   },
   {
     dates: "Jan 2023 — Dec 2024",
     role: "Client Solutions Specialist",
-    organization: "Zimbabwe Insurance Brokers",
-    detail:
-      "Analyzed client exposures and claims histories to support coverage design, pricing, insurer selection and placement strategy, alongside pipeline and revenue reporting.",
+    organization: "Zimbabwe Insurance Brokers | Harare, Zimbabwe",
+    details: [
+      "Analyzed client risk profiles, exposure data, and claims histories in Excel and evaluated market options to support coverage structuring, pricing, and insurer/reinsurer negotiations.",
+      "Leveraged Salesforce and HubSpot CRM data to identify prospects and track business development, building pipeline dashboards and KPI reporting on conversion rates and revenue forecasts.",
+    ],
   },
   {
     dates: "Nov 2020 — Dec 2022",
     role: "Claims Analyst",
-    organization: "First Mutual Holdings",
-    detail:
-      "Analyzed loss drivers across auto, liability and property portfolios and developed reporting for cycle time, loss ratios, reserve adequacy and adjuster performance.",
+    organization: "First Mutual Holdings | Harare, Zimbabwe",
+    details: [
+      "Analyzed claims data and loss drivers across auto, liability, and property portfolios to identify subrogation opportunities and support settlement and reserve decisions.",
+      "Reported on claims cycle time, loss ratios, reserve adequacy, and adjuster performance using Power BI dashboards and SAP/Excel data, partnering with Underwriting, Legal, and Finance on risk and claims-handling strategy.",
+    ],
   },
 ];
 
@@ -100,7 +108,7 @@ export default function Home() {
           <h1>Ryan<br />Makamba</h1>
           <p className="specialization">Data Analytics <i /> Risk &amp; Insurance <i /> Business Operations</p>
           <p className="intro">
-            I turn complex operational and risk data into clear, defensible decisions—across insurance, higher education and nonprofit organizations.
+            A Data Analyst dedicated to developing business intelligence solutions that leverage best practice technologies to deliver data-driven insights. With over 4+ years of experience in data analytics and reporting, statistical analysis and business intelligence across insurance, higher education, and nonprofit operations.
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#work">View selected work <ArrowDownRight /></a>
@@ -158,7 +166,11 @@ export default function Home() {
           {experience.map((item) => (
             <article key={item.role}>
               <time>{item.dates}</time>
-              <div><h3>{item.role}</h3><h4>{item.organization}</h4><p>{item.detail}</p></div>
+              <div>
+                <h3>{item.role}</h3>
+                <h4>{item.organization}</h4>
+                <ul>{item.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+              </div>
             </article>
           ))}
         </div>

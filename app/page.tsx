@@ -38,7 +38,6 @@ const projects = [
       "An audit-ready evidence platform connecting underwriting decisions, rule versions, cloud controls and policy-as-code mappings across major regulatory frameworks.",
     tags: ["NIST", "ISO 27001", "SOC 2", "SOX", "HIPAA", "GDPR", "COBIT"],
     href: "https://aegis-evidence-studio-tppi.vercel.app",
-    image: "/aegis-evidence-cover.png",
   },
 ];
 

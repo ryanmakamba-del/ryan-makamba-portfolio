@@ -226,7 +226,7 @@ export default function Home() {
                 {tools.map(({ label, value, icon: Icon }) => (
                   <li key={label}>
                     <Icon />
-                    <span>{value ? <><b>{label}:</b> {value}</> : label}</span>
+                    <span>{value ? <>{label}: {value}</> : label}</span>
                   </li>
                 ))}
               </ul>

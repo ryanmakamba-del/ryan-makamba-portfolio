@@ -2,7 +2,6 @@ import {
   ArrowDownRight,
   ArrowUpRight,
   BriefcaseBusiness,
-  Database,
   GraduationCap,
   Mail,
   MapPin,
@@ -18,7 +17,7 @@ const projects = [
       "A multi-line P&C platform that automates risk scoring, pricing and expected-loss analysis while connecting underwriting decisions to portfolio performance.",
     tags: ["Next.js", "Risk Scoring", "Pricing Analytics", "P&C Insurance"],
     href: "https://aegis-underwriting-command-center.vercel.app",
-    image: "/aegis-underwriting-cover.png",
+    image: "/underwriting-preview.png",
   },
   {
     number: "02",
@@ -28,7 +27,7 @@ const projects = [
       "An operational claims workspace for monitoring severity, reserve adequacy, aging pressure, fraud indicators and leakage exposure across personal and commercial lines.",
     tags: ["Claims Analytics", "Fraud Indicators", "Reserve Monitoring"],
     href: "https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/",
-    image: "/aegis-claims-cover.png",
+    image: "/claims-preview.png",
   },
   {
     number: "03",
@@ -45,38 +44,30 @@ const experience = [
   {
     dates: "Jun 2026 — Aug 2026",
     role: "Annual Fund & Database Specialist Intern",
-    organization: "The Salvation Army – Southern New England Division | Hartford, CT",
-    details: [
-      "Managed divisional donor data integrity across Salesforce and Raiser's Edge gift entry, reconciliation, reporting, and maintaining audit-ready records for the Advancement team.",
-      "Partnered with IT to connect Salesforce and Raiser's Edge data into Power BI and Excel reporting workflows, giving leadership up-to-date visibility into donor giving and improving reconciliation efficiency.",
-    ],
+    organization: "The Salvation Army — Southern New England Division",
+    detail:
+      "Managed and reconciled donor data across Salesforce and Raiser’s Edge, built reporting workflows in Power BI and Excel, and strengthened data quality across fundraising channels.",
   },
   {
     dates: "Apr 2025 — May 2026",
-    role: "Research Assistant – Office of Institutional Research & Strategy",
-    organization: "Quinnipiac University | Hamden, CT",
-    details: [
-      "Standardized compliance documentation and supported federal regulatory submissions (Integrated Postsecondary Education Data System (IPEDS), National Student Loan Data System (NSLDS), and Financial Value Transparency Reporting) by generating and auditing reporting extracts via Informer.",
-      "Consolidated enrollment, academic records, and financial aid data across Ellucian Colleague for 9,200+ students, structuring validated datasets to power institutional dashboards and official reporting.",
-    ],
+    role: "Research Assistant — Institutional Research & Strategy",
+    organization: "Quinnipiac University",
+    detail:
+      "Integrated enrollment, student-record and financial-aid data for 9,200+ students while supporting IPEDS, NSLDS and FVT/GE reporting with governed, audit-ready datasets.",
   },
   {
     dates: "Jan 2023 — Dec 2024",
     role: "Client Solutions Specialist",
-    organization: "Zimbabwe Insurance Brokers | Harare, Zimbabwe",
-    details: [
-      "Analyzed client risk profiles, exposure data, and claims histories in Excel and evaluated market options to support coverage structuring, pricing, and insurer/reinsurer negotiations.",
-      "Leveraged Salesforce and HubSpot CRM data to identify prospects and track business development, building pipeline dashboards and KPI reporting on conversion rates and revenue forecasts.",
-    ],
+    organization: "Zimbabwe Insurance Brokers",
+    detail:
+      "Analyzed client exposures and claims histories to support coverage design, pricing, insurer selection and placement strategy, alongside pipeline and revenue reporting.",
   },
   {
     dates: "Nov 2020 — Dec 2022",
     role: "Claims Analyst",
-    organization: "First Mutual Holdings | Harare, Zimbabwe",
-    details: [
-      "Analyzed claims data and loss drivers across auto, liability, and property portfolios to identify subrogation opportunities and support settlement and reserve decisions.",
-      "Reported on claims cycle time, loss ratios, reserve adequacy, and adjuster performance using Power BI dashboards and SAP/Excel data, partnering with Underwriting, Legal, and Finance on risk and claims-handling strategy.",
-    ],
+    organization: "First Mutual Holdings",
+    detail:
+      "Analyzed loss drivers across auto, liability and property portfolios and developed reporting for cycle time, loss ratios, reserve adequacy and adjuster performance.",
   },
 ];
 
@@ -93,7 +84,7 @@ export default function Home() {
       <header className="site-header">
         <a className="monogram" href="#top" aria-label="Ryan Makamba home">RM</a>
         <nav aria-label="Primary navigation">
-          <a href="#work">Work</a>
+          <a href="#work">View My Work</a>
           <a href="#experience">Experience</a>
           <a href="#about">About</a>
         </nav>
@@ -108,13 +99,11 @@ export default function Home() {
           <h1>Ryan<br />Makamba</h1>
           <p className="specialization">Data Analytics <i /> Risk &amp; Insurance <i /> Business Operations</p>
           <p className="intro">
-            A Data Analyst dedicated to developing business intelligence solutions that leverage best practice technologies to deliver data-driven insights. With over 4+ years of experience in data analytics and reporting, statistical analysis and business intelligence across insurance, higher education, and nonprofit operations.
+            I turn complex operational and risk data into clear, defensible decisions—across insurance, higher education and nonprofit organizations.
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#work">View selected work <ArrowDownRight /></a>
-            <a className="text-link resume-link" href="/Ryan-Makamba-Resume.pdf" target="_blank" rel="noreferrer">
-              Resume <ArrowUpRight />
-            </a>
+            <a className="text-link" href="/Ryan-Makamba-Resume.docx" download>Download résumé</a>
           </div>
         </div>
         <aside className="hero-note">
@@ -127,7 +116,7 @@ export default function Home() {
 
       <section className="work section" id="work">
         <div className="section-heading">
-          <p className="eyebrow">Selected Work</p>
+          <p className="eyebrow">Featured Projects</p>
           <h2>Systems built around<br />real business decisions.</h2>
         </div>
         <div className="project-list">
@@ -168,11 +157,7 @@ export default function Home() {
           {experience.map((item) => (
             <article key={item.role}>
               <time>{item.dates}</time>
-              <div>
-                <h3>{item.role}</h3>
-                <h4>{item.organization}</h4>
-                <ul>{item.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
-              </div>
+              <div><h3>{item.role}</h3><h4>{item.organization}</h4><p>{item.detail}</p></div>
             </article>
           ))}
         </div>
@@ -188,7 +173,6 @@ export default function Home() {
           <div className="contact-row">
             <a href="mailto:ryanmakamba@gmail.com"><Mail /> Email</a>
             <a href="https://www.linkedin.com/in/ryan-makamba/" target="_blank" rel="noreferrer"><ArrowUpRight /> LinkedIn</a>
-            <a href="https://github.com/ryanmakamba-del" target="_blank" rel="noreferrer"><Database /> GitHub</a>
           </div>
         </div>
         <div className="credentials">

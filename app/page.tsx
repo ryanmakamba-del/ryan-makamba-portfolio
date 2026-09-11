@@ -15,7 +15,7 @@ const projects = [
     category: "Insurance Analytics",
     description:
       "A multi-line P&C platform that automates risk scoring, pricing and expected-loss analysis while connecting underwriting decisions to portfolio performance.",
-    tags: ["Next.js", "Risk Scoring", "Pricing Analytics", "P&C Insurance"],
+    tags: ["Risk Scoring", "Pricing Analytics", "P&C Insurance"],
     href: "https://aegis-underwriting-command-center.vercel.app",
     image: "/aegis-underwriting-cover.png",
   },
@@ -110,7 +110,7 @@ export default function Home() {
             A Data Analyst dedicated to developing business intelligence solutions that leverage best practice technologies to deliver data-driven insights. With over 4+ years of experience in data analytics and reporting, statistical analysis and business intelligence across insurance, higher education, and nonprofit operations.
           </p>
           <div className="hero-actions">
-            <a className="primary-button" href="#work">View selected work <ArrowDownRight /></a>
+            <a className="primary-button" href="#work">View My Work <ArrowDownRight /></a>
             <a className="text-link resume-link" href="/Ryan-Makamba-Resume.pdf" target="_blank" rel="noreferrer">
               Resume <ArrowUpRight />
             </a>
@@ -120,7 +120,6 @@ export default function Home() {
           <span>Current focus</span>
           <strong>Applied AI &amp;<br />Business Analytics</strong>
           <p>Building practical systems for risk, reporting and operational intelligence.</p>
-          <div className="hero-stat"><b>4+</b><span>years across analytics<br />and insurance</span></div>
         </aside>
       </section>
 

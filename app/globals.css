@@ -76,11 +76,11 @@ h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(4.6rem,9.7vw,9
 .credential small { margin-top:8px; color:var(--muted); font-size:.78rem; line-height:1.5; }
 .skills-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:26px; align-items:stretch; }
 .skills-card { background:var(--white); border:1px solid #d8dde3; border-radius:10px; padding:17px 16px; box-shadow:0 10px 24px rgba(16,35,63,.07); }
-.skills-card h3 { margin:0 0 15px; display:flex; align-items:center; gap:8px; color:var(--blue); font-family:Georgia,serif; font-size:1.08rem; font-weight:600; }
-.skills-card h3 svg { width:18px; height:18px; color:var(--rust); }
+.skills-card h3 { margin:0 0 15px; display:flex; align-items:center; gap:8px; color:var(--ink); font-family:Georgia,serif; font-size:1.08rem; font-weight:600; }
+.skills-card h3 svg { width:18px; height:18px; color:var(--ink); }
 .skills-card ul { list-style:none; padding:0; margin:0; display:grid; gap:9px; }
-.skills-card li { display:grid; grid-template-columns:18px 1fr; gap:7px; align-items:start; color:#263b56; font-size:.86rem; line-height:1.4; }
-.skills-card li svg { width:15px; height:15px; margin-top:2px; color:var(--rust); stroke-width:1.8; }
+.skills-card li { display:grid; grid-template-columns:18px 1fr; gap:7px; align-items:start; color:var(--ink); font-size:.86rem; line-height:1.4; }
+.skills-card li svg { width:15px; height:15px; margin-top:2px; color:var(--ink); stroke-width:1.8; }
 
 footer { background:#0b1b31; color:white; min-height:180px; padding:45px clamp(24px,8vw,130px); display:grid; grid-template-columns:1.4fr .7fr 1fr; align-items:center; gap:30px; }
 footer>div { display:flex; align-items:center; gap:16px; }

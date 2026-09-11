@@ -112,7 +112,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#work">View selected work <ArrowDownRight /></a>
-            <a className="text-link" href="/Ryan-Makamba-Resume.docx" download>Download résumé</a>
+            <a className="text-link" href="/Ryan-Makamba-Resume.pdf" download>Download résumé</a>
           </div>
         </div>
         <aside className="hero-note">

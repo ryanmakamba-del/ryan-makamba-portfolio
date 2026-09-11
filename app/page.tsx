@@ -18,7 +18,7 @@ const projects = [
       "A multi-line P&C platform that automates risk scoring, pricing and expected-loss analysis while connecting underwriting decisions to portfolio performance.",
     tags: ["Next.js", "Risk Scoring", "Pricing Analytics", "P&C Insurance"],
     href: "https://aegis-underwriting-command-center.vercel.app",
-    image: "/underwriting-preview.png",
+    image: "/aegis-underwriting-cover.png",
   },
   {
     number: "02",
@@ -28,7 +28,7 @@ const projects = [
       "An operational claims workspace for monitoring severity, reserve adequacy, aging pressure, fraud indicators and leakage exposure across personal and commercial lines.",
     tags: ["Claims Analytics", "Fraud Indicators", "Reserve Monitoring"],
     href: "https://aegis-claims-intelligence-center-ge9zymxtq-aegis-da54.vercel.app/",
-    image: "/claims-preview.png",
+    image: "/aegis-claims-cover.png",
   },
   {
     number: "03",
@@ -38,6 +38,7 @@ const projects = [
       "An audit-ready evidence platform connecting underwriting decisions, rule versions, cloud controls and policy-as-code mappings across major regulatory frameworks.",
     tags: ["NIST", "ISO 27001", "SOC 2", "SOX", "HIPAA", "GDPR", "COBIT"],
     href: "https://aegis-evidence-studio-tppi.vercel.app",
+    image: "/aegis-evidence-cover.png",
   },
 ];
 

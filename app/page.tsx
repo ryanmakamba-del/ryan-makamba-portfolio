@@ -1,11 +1,20 @@
 import {
   ArrowDownRight,
   ArrowUpRight,
+  BarChart3,
+  BrainCircuit,
   BriefcaseBusiness,
+  Building2,
+  Cloud,
+  Code2,
+  Database,
   GraduationCap,
   Mail,
   MapPin,
+  Sheet,
   ShieldCheck,
+  University,
+  Wrench,
 } from "lucide-react";
 
 const projects = [
@@ -79,11 +88,22 @@ const experience = [
   },
 ];
 
-const skills = [
-  ["Analytics & BI", "Excel · Power BI · DAX · Power Query · SQL · SPSS"],
-  ["Programming & Automation", "Python · Linux · Power Automate · Cloud Custodian"],
-  ["Insurance & Risk", "Underwriting · Claims · Pricing · Reserving · Compliance"],
-  ["Business Systems", "Salesforce · HubSpot · Raiser’s Edge · SAP BW · SAP BusinessObjects"],
+const technicalSkills = [
+  { label: "Data Analysis & Manipulation", icon: Code2 },
+  { label: "Database Management", icon: Database },
+  { label: "Data Visualization", icon: BarChart3 },
+  { label: "Machine Learning", icon: BrainCircuit },
+  { label: "Cloud Computing", icon: Cloud },
+];
+
+const tools = [
+  { label: "CRM & Enterprise Platforms", value: "Salesforce, HubSpot", icon: Building2 },
+  { label: "Higher Ed Systems", value: "Ellucian Colleague (SIS), Informer (Reporting)", icon: University },
+  { label: "Donor Database Systems", value: "Raiser's Edge", icon: Database },
+  { label: "Power BI", icon: BarChart3 },
+  { label: "Excel", icon: Sheet },
+  { label: "SQL", icon: Database },
+  { label: "Python", icon: Code2 },
 ];
 
 export default function Home() {
@@ -191,9 +211,34 @@ export default function Home() {
         <div className="credentials">
           <div className="credential"><GraduationCap /><span><b>MS Applied AI &amp; Business Analytics</b><small>Quinnipiac University · Expected Dec 2026</small></span></div>
           <div className="credential"><BriefcaseBusiness /><span><b>BSc Risk Management &amp; Insurance</b><small>National University of Science and Technology · 2022</small></span></div>
-          <div className="skill-list">
-            {skills.map(([title, value]) => <div key={title}><b>{title}</b><span>{value}</span></div>)}
-          </div>
+        </div>
+      </section>
+
+      <section className="skills-section section" aria-labelledby="skills-heading">
+        <div className="skills-heading">
+          <p className="eyebrow">Capabilities</p>
+          <h2 id="skills-heading">Skills &amp; Tools</h2>
+        </div>
+        <div className="skills-grid">
+          <article className="skills-card">
+            <h3><Code2 /> Technical Skills</h3>
+            <ul>
+              {technicalSkills.map(({ label, icon: Icon }) => (
+                <li key={label}><Icon /><span>{label}</span></li>
+              ))}
+            </ul>
+          </article>
+          <article className="skills-card">
+            <h3><Wrench /> Tools</h3>
+            <ul>
+              {tools.map(({ label, value, icon: Icon }) => (
+                <li key={label}>
+                  <Icon />
+                  <span>{value ? <><b>{label}:</b> {value}</> : label}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
         </div>
       </section>
 

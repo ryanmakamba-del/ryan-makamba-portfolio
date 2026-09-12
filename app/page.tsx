@@ -1,17 +1,20 @@
 import {
   ArrowDownRight,
   ArrowUpRight,
-  BarChart3,
-  BrainCircuit,
+  Bot,
+  Braces,
   BriefcaseBusiness,
   Building2,
+  ChartLine,
   Cloud,
-  Code2,
+  CodeXml,
   Database,
+  FileSpreadsheet,
   GraduationCap,
+  LaptopMinimal,
+  LayoutGrid,
   Mail,
   MapPin,
-  Sheet,
   ShieldCheck,
   University,
   Wrench,
@@ -89,10 +92,10 @@ const experience = [
 ];
 
 const technicalSkills = [
-  { label: "Data Analysis & Manipulation", icon: Code2 },
+  { label: "Data Analysis & Manipulation", icon: CodeXml },
   { label: "Database Management", icon: Database },
-  { label: "Data Visualization", icon: BarChart3 },
-  { label: "Machine Learning", icon: BrainCircuit },
+  { label: "Data Visualization", icon: ChartLine },
+  { label: "Machine Learning", icon: Bot },
   { label: "Cloud Computing", icon: Cloud },
 ];
 
@@ -100,10 +103,10 @@ const tools = [
   { label: "CRM & Enterprise Platforms", value: "Salesforce, HubSpot", icon: Building2 },
   { label: "Higher Ed Systems", value: "Ellucian Colleague (SIS), Informer (Reporting)", icon: University },
   { label: "Donor Database Systems", value: "Raiser's Edge", icon: Database },
-  { label: "Power BI", icon: BarChart3 },
-  { label: "Excel", icon: Sheet },
+  { label: "Power BI", icon: LayoutGrid },
+  { label: "Excel", icon: FileSpreadsheet },
   { label: "SQL", icon: Database },
-  { label: "Python", icon: Code2 },
+  { label: "Python", icon: Braces },
 ];
 
 export default function Home() {
@@ -213,7 +216,7 @@ export default function Home() {
           <div className="credential"><BriefcaseBusiness /><span><b>BSc Risk Management &amp; Insurance</b><small>National University of Science and Technology · 2022</small></span></div>
           <div className="skills-grid" aria-label="Skills and tools">
             <article className="skills-card technical-card">
-              <h3><Code2 /> Technical Skills</h3>
+              <h3><LaptopMinimal /> Technical Skills</h3>
               <ul>
                 {technicalSkills.map(({ label, icon: Icon }) => (
                   <li key={label}><Icon /><span>{label}</span></li>
